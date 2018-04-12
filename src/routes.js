@@ -6,7 +6,7 @@ import Callback from './Callback/Callback';
 import Auth from './Auth/Auth';
 import history from './history';
 import Test from './pages/Test'
-
+import Createplayer from "./mutations/Createplayer";
 const auth = new Auth();
 
 const handleAuthentication = ({location}) => {
@@ -22,6 +22,7 @@ export default () => (
                 <Route path="/" render={(props) => <App auth={auth} {...props} />}/>
                 <Route path="/home" render={(props) => <Home auth={auth} {...props} />}/>
                 <Route path="/Test" render={(props) => <Test auth={auth} {...props} />}/>
+                <Route path="/Createplayer" render={(props) => <Createplayer auth={auth} {...props} />}/>
                 <Route path="/callback" render={(props) => {
                     handleAuthentication(props);
                     return <Callback {...props} />
