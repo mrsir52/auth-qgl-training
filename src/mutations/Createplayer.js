@@ -2,7 +2,7 @@ import graphql from 'graphql-tag'
 
 export default graphql`
     mutation createPlayer(
-        $id: ID!
+#        $id: ID!
         $firstName: String!
         $lastName: String!
         $position: String!

@@ -6,8 +6,11 @@ import Callback from './Callback/Callback';
 import Auth from './Auth/Auth';
 import history from './history';
 import Test from './pages/Test'
-import Createplayer from "./mutations/Createplayer";
+import Newtest from './pages/Newtest'
+import Muttest from './pages/Muttest'
+
 const auth = new Auth();
+import TestMutation from './pages/TestMutation'
 
 const handleAuthentication = ({location}) => {
   if (/access_token|id_token|error/.test(location.hash)) {
@@ -22,7 +25,9 @@ export default () => (
                 <Route path="/" render={(props) => <App auth={auth} {...props} />}/>
                 <Route path="/home" render={(props) => <Home auth={auth} {...props} />}/>
                 <Route path="/Test" render={(props) => <Test auth={auth} {...props} />}/>
-                <Route path="/Createplayer" render={(props) => <Createplayer auth={auth} {...props} />}/>
+                <Route path="/Newtest" render={(props) => <Newtest auth={auth} {...props} />}/>
+                <Route path="/TestMutation" render={(props) => <TestMutation auth={auth} {...props} />}/>
+                <Route path="/Muttest" render={(props) => <Muttest auth={auth} {...props} />}/>
                 <Route path="/callback" render={(props) => {
                     handleAuthentication(props);
                     return <Callback {...props} />
