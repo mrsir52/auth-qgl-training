@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import { graphql} from 'react-apollo';
 // import gql from 'graphql-tag'
-import Createplayer from '../mutations/Createplayer'
+import Createplayer from '../mutations/Mutateplayer'
 import {Card, CardBody, Input, Button} from 'mdbreact'
 
 // const defaultState = {
@@ -108,14 +108,14 @@ class test extends Component {
                 Here is a list of players from the DynamoDB database
                 <br/>
                 <br/>
-                {/*{*/}
-                     {/*this.props.players.map((players, index) => (*/}
-                        {/*<div>*/}
-                            {/*<p>{players.firstName}</p>*/}
+                {
+                     this.props.players.map((players, index) => (
+                        <div>
+                            <p>{players.firstName}</p>
 
-                        {/*</div>*/}
-                    {/*))*/}
-                {/*}*/}
+                        </div>
+                    ))
+                }
 
                 <section>
                     <form onSubmit={this.onSubmit.bind(this)}>

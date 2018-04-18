@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import {graphql} from 'react-apollo';
 import gql from 'graphql-tag'
 
-import {Card, CardBody, Input, Button} from 'mdbreact'
+import {Card, CardBody, CardTitle, CardText, CardImage, Input, Button} from 'mdbreact'
 
 
 
@@ -21,63 +21,84 @@ class TestMutation extends Component {
         console.log(this.props)
         return (
             <div>
-                <h1>Add Player</h1>
-                <p>
-                    To add a player to the Database click on the <strong>Add Player</strong> button
-                </p>
-                <p>{this.props.firstName}</p>
-                <p>this is playerlist</p>
+                {/*<h1>Add Player</h1>*/}
+                {/*<p>*/}
+                    {/*To add a player to the Database click on the <strong>Add Player</strong> button*/}
+                {/*</p>*/}
+                {/*<p>{this.props.firstName}</p>*/}
+                {/*<p>this is playerlist</p>*/}
 
-                <form>
-                <CardBody className="player-form">
-                    <Card>
-                        <Input
-                            type="text"
-                            name="firstName"
-                            placeholder="First Name"
-                            value={this.state.firstName}
-                            onChange={e => this.setState({firstName: e.target.value})}
-                        />
-                        <Input
-                            type="text"
-                            name="lastName"
-                            placeholder="Last Name"
-                            value={this.state.lastName}
-                            onChange={e => this.setState({lastName: e.target.value})}
-                        />
-                        <Input
-                            type="text"
-                            name="position"
-                            placeholder="position"
-                            value={this.state.position}
-                            onChange={e => this.setState({position: e.target.value})}
-                        />
-                        <Input
-                            type="text"
-                            name="Class Of"
-                            placeholder="First Name"
-                            value={this.state.graduatingClass}
-                            onChange={e => this.setState({graduatingClass: e.target.value})}
-                        />
-                        <Input
-                            type="number"
-                            name="Max Bench"
-                            placeholder="First Name"
-                            value={this.state.maxBench}
-                            onChange={e => this.setState({maxBench: e.target.value})}
-                        />
-                        <Input
-                            type="number"
-                            name="Max Squat"
-                            placeholder="First Name"
-                            value={this.state.maxSquat}
-                            onChange={e => this.setState({maxSquat: e.target.value})}
-                        />
+                {/*<form>*/}
+                {/*<CardBody className="player-form">*/}
+                    {/*<Card>*/}
+                        {/*<Input*/}
+                            {/*type="text"*/}
+                            {/*name="firstName"*/}
+                            {/*placeholder="First Name"*/}
+                            {/*value={this.state.firstName}*/}
+                            {/*onChange={e => this.setState({firstName: e.target.value})}*/}
+                        {/*/>*/}
+                        {/*<Input*/}
+                            {/*type="text"*/}
+                            {/*name="lastName"*/}
+                            {/*placeholder="Last Name"*/}
+                            {/*value={this.state.lastName}*/}
+                            {/*onChange={e => this.setState({lastName: e.target.value})}*/}
+                        {/*/>*/}
+                        {/*<Input*/}
+                            {/*type="text"*/}
+                            {/*name="position"*/}
+                            {/*placeholder="position"*/}
+                            {/*value={this.state.position}*/}
+                            {/*onChange={e => this.setState({position: e.target.value})}*/}
+                        {/*/>*/}
+                        {/*<Input*/}
+                            {/*type="text"*/}
+                            {/*name="Class Of"*/}
+                            {/*placeholder="First Name"*/}
+                            {/*value={this.state.graduatingClass}*/}
+                            {/*onChange={e => this.setState({graduatingClass: e.target.value})}*/}
+                        {/*/>*/}
+                        {/*<Input*/}
+                            {/*type="number"*/}
+                            {/*name="Max Bench"*/}
+                            {/*placeholder="First Name"*/}
+                            {/*value={this.state.maxBench}*/}
+                            {/*onChange={e => this.setState({maxBench: e.target.value})}*/}
+                        {/*/>*/}
+                        {/*<Input*/}
+                            {/*type="number"*/}
+                            {/*name="Max Squat"*/}
+                            {/*placeholder="First Name"*/}
+                            {/*value={this.state.maxSquat}*/}
+                            {/*onChange={e => this.setState({maxSquat: e.target.value})}*/}
+                        {/*/>*/}
+                    {/*</Card>*/}
+                {/*</CardBody>*/}
+                {/*<Button onClick={() => this._createPlayer()}>Add player</Button>*/}
+            {/*</form>*/}
+                <div>
+                    <div className="row">
+                    <Card cascade className="col-lg-3">
+                        <CardImage tag="div">
+                            <div className="view gradient-card-header blue-gradient">
+                                <h2 className="h2-responsive">Heading</h2>
+                                <p>Subheading</p>
+                            </div>
+                        </CardImage>
+                        <CardBody>
+                            <CardTitle>Card title</CardTitle>
+                            <CardText>Some quick example text to build on the card title and make up the bulk of the card's content.</CardText>
+                            <Button href="#">Button</Button>
+                        </CardBody>
                     </Card>
-                </CardBody>
-                <Button onClick={() => this._createPlayer()}>Add player</Button>
-            </form>
-    </div>
+
+
+                </div>
+                </div>
+
+
+            </div>
     )
 
     }

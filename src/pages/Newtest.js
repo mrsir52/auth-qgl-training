@@ -1,34 +1,31 @@
 import React, {Component} from 'react';
 import {graphql} from 'react-apollo';
 import ListPlayers from '../queries/ListPlayers'
-import { Table, Button } from 'mdbreact'
+import { Table, Button, Card, CardBody } from 'mdbreact'
+import { Badge } from 'react-bootstrap'
 
 
 
 class Newtest extends Component {
 
-    // state = {
-    //     firstName: '',
-    //     lastName: '',
-    //     position: '',
-    //     maxBench: '',
-    //     maxSquat: '',
-    //     graduatingClass: ''
-    // }
-    // sort = this.props.players.sort();
+    state = { players:[...this.props.players]};
+
 
     render() {
-        console.log(this.props.players.sort);
+        console.log(this.state)
+
         return (
             <div>
                 <h1>This is from Newtest</h1>
-                <Button color="danger" onClick={() => {this.sort()}}>Sort</Button>
+                <Button color="danger" onClick={() => this.setState({players:[...this.state.players.sortByName()]})}>Sort By Name</Button>
+
                 {
-                    this.props.players.map((player, index) => (
+                    this.state.players.map((player, index) => (
                         <div className="container">
                             <div className="row">
                                 <div className="col-lg-8" >
                                     {/*<Card>*/}
+                                        {/*<CardBody>*/}
                                     <table className="table" >
                                         <thead>
                                         <tr>
@@ -36,10 +33,12 @@ class Newtest extends Component {
                                             <th>{player.firstName}</th>
                                             <th>{player.lastName}</th>
                                             <th>{player.position}</th>
+                                            <th>{player.graduatingClass}</th>
                                         </tr>
 
                                         </thead>
                                     </table>
+                                        {/*</CardBody>*/}
                                     {/*</Card>*/}
                                 </div>
 
