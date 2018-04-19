@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Button, Card, CardBody, Badge } from 'mdbreact';
+import { Button, Card, CardBody} from 'mdbreact';
 import Calendar from 'react-calendar/dist/entry.nostyle'
 import CalendarHeatmap from 'react-calendar-heatmap';
 
@@ -158,7 +158,7 @@ class Home extends Component {
                             </Card>
                             <br/>
                                 <Card>
-                                    <Button color="yellow-dark">
+                                    <Button color="warning">
                                         Submit Workout
                                     </Button>
                                     <Button color='warning'>

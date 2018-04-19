@@ -11,7 +11,7 @@ import Muttest from './pages/Muttest'
 import Playerprofile from './pages/Playerprofile'
 import Updateplayer from './pages/Updateplayer'
 import Admin from './pages/Admin'
-
+import TestFetch from './pages/Testfetch'
 
 const auth = new Auth();
 import TestMutation from './pages/TestMutation'
@@ -31,6 +31,7 @@ export default () => (
                 <Route path="/Playerprofile" render={(props) => <Playerprofile auth={auth} {...props} />}/>
                 <Route path="/Newtest" render={(props) => <Newtest auth={auth} {...props} />}/>
                 <Route path="/TestMutation" render={(props) => <TestMutation auth={auth} {...props} />}/>
+                <Route path="/Testfetch" render={(props) => <TestFetch auth={auth} {...props} />}/>
                 <Route path="/Muttest" render={(props) => <Muttest auth={auth} {...props} />}/>
                 <Route path="/Updateplayer" render={(props) => <Updateplayer auth={auth} {...props} />}/>
                 <Route path="/Admin" render={(props) => <Admin auth={auth} {...props} />}/>

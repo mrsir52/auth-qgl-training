@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import {graphql} from 'react-apollo';
 import gql from 'graphql-tag'
 
-import {Card, CardBody, CardTitle, CardText, CardImage, Input, Button} from 'mdbreact'
+import {Card, CardBody, CardTitle, CardText, CardImage, Button} from 'mdbreact'
 
 
 

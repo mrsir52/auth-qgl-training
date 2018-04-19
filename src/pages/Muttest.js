@@ -111,6 +111,9 @@ class Muttest extends Component {
 }
 
 export default graphql(Mutateplayer)(Muttest)
+
+
+
 // graphql(Createplayer, {
 //     props: props => ({
 //         onAdd: player => props.mutate ({
