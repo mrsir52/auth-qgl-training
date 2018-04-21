@@ -131,3 +131,7 @@
 .react-calendar-heatmap .color-gitlab-4 {
     fill: #254e77;
 }
+
+.profile-class {
+    height: 140px;
+}

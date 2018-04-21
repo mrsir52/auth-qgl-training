@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Button, Card, CardBody} from 'mdbreact';
 import Calendar from 'react-calendar/dist/entry.nostyle'
 import CalendarHeatmap from 'react-calendar-heatmap';
+import propic from '../profilepic.png'
 
 import "../css/style.css"
 
@@ -24,7 +25,12 @@ class Home extends Component {
                                 { date: '2018-03-22' },
                                 { date: '2018-03-24' },
                                 { date: '2018-04-02' },
-                                { date: '2018-04-17' },
+                                { date: '2018-04-03' },
+                                { date: '2018-04-04' },
+                                { date: '2018-04-05' },
+                                { date: '2018-04-10' },
+                                { date: '2018-04-11' },
+                                { date: '2018-04-12' },
                                 // ...and so on
                             ]}
                         />
@@ -152,8 +158,8 @@ class Home extends Component {
                                 <Button size="lg" color="primary">Player Name</Button>
                                <CardBody>
 
-                                <h2>Profile Picture</h2>
-                                    <h6>lorem ipsum</h6>
+                                <img className="profile-class" src={propic} alt="profile pic"/>
+
                                 </CardBody>
                             </Card>
                             <br/>

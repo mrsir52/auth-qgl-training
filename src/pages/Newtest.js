@@ -1,21 +1,12 @@
 import React, {Component} from 'react';
 import {graphql} from 'react-apollo';
 import ListPlayers from '../queries/ListPlayers'
-import { Button, } from 'mdbreact'
+// import { Button, } from 'mdbreact'
 
 // items.sort(function (a, b) {
 //     return a.value - b.value;
 // })
 
-class Template extends Component {
-    render() {
-        return (
-            <div>
-                Hello from Template
-            </div>
-        )
-    }
-}
 
 
 class Newtest extends Component {
@@ -90,8 +81,8 @@ class Newtest extends Component {
         return (
             <div>
                 <h1>This is from Newtest</h1>
-                <button onClick={ ()=> {position()}}>Position</button>
                 <button onClick={ ()=> {lastName()}}>Last Name</button>
+                <button onClick={ ()=> {position()}}>Position</button>
                 <button onClick={ ()=> {graduatingClass()}}>Graduating Class</button>
 
                 {

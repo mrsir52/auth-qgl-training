@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import { graphql} from 'react-apollo';
 // import gql from 'graphql-tag'
 import Createplayer from '../mutations/Mutateplayer'
-import {Card, CardBody, Input, Button} from 'mdbreact'
+import {Card, CardBody, Input} from 'mdbreact'
 
 // const defaultState = {
 //     firstName: '',
@@ -165,7 +165,7 @@ class test extends Component {
                                 />
                             </Card>
                         </CardBody>
-                        <Button type="submit">Add Player</Button>
+                        <button type="submit">Add Player</button>
                     </form>
 
                 </section>
