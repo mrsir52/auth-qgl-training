@@ -5,8 +5,6 @@ import Home from './Home/Home';
 import Callback from './Callback/Callback';
 import Auth from './Auth/Auth';
 import history from './history';
-import Test from './pages/Test'
-import Muttest from './pages/Muttest'
 import Playerprofile from './pages/Playerprofile'
 import Updateplayer from './pages/Updateplayer'
 import Admin from './pages/Admin'
@@ -30,8 +28,6 @@ export default () => (
                 <Route path="/home" render={(props) => <Home auth={auth} {...props} />}/>
                 <Route path="/Playerprofile" render={(props) => <Playerprofile auth={auth} {...props} />}/>
                 <Route path="/Teamdata" render={(props) => <Teamdata auth={auth} {...props} />}/>
-                <Route path="/Test" render={(props) => <Test auth={auth} {...props} />}/>
-                <Route path="/Muttest" render={(props) => <Muttest auth={auth} {...props} />}/>
                 <Route path="/Updateplayer" render={(props) => <Updateplayer auth={auth} {...props} />}/>
                 <Route path="/Admin" render={(props) => <Admin auth={auth} {...props} />}/>
                 <Route path="/Createplayer" render={(props) => <Createplayer auth={auth} {...props} />}/>

@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {graphql} from 'react-apollo';
 import Mutateplayer from '../mutations/Mutateplayer'
-// import { Card, CardBody} from 'mdbreact'
+import { Card, CardBody, Input, Button} from 'mdbreact'
 import uuidV4 from 'uuid'
 import "../css/style.css"
 
@@ -41,6 +41,52 @@ class Createplayer extends Component {
 
         return (
             <div className="container">
+                    <br/>
+                    <div className="row">
+                        <div className="col-lg-3">
+                            <Card>
+                                <a href="/Teamdata">
+                                    <h2>Team Data</h2>
+                                </a>
+                                <br/>
+                                <br/>
+                                <br/>
+                                <br/>
+                            </Card>
+                        </div>
+                        <br/>
+                        <div className="col-lg-3">
+                            <Card>
+                                <a href="/Createplayer">
+                                    <h2>Create Player</h2>
+                                </a>
+                                <a href="/Updateplayer">
+                                    <h2>Update Player</h2>
+                                </a>
+                                <a href="/Deleteplayer">
+                                    <h2>Delete Player</h2>
+                                </a>
+
+                            </Card>
+                        </div>
+                        <br/>
+                        <div className="col-lg-3">
+                            <Card>
+                                <h2>Graduating Class Data</h2>
+                                <br/>
+                                <br/>
+                                <br/>
+                            </Card>
+                        </div>
+                        <div className="col-lg-3">
+                            <Card>
+                                <h2>Workouts</h2>
+                                <br/>
+                                <br/>
+                                <br/>
+                            </Card>
+                        </div>
+                    </div>
                 <section className="">
                     <div className="row">
 
@@ -65,55 +111,55 @@ class Createplayer extends Component {
                                         window.location.replace('/Teamdata')
                             }}>
                                 <h1>Create Player</h1>
-                                {/*<Card>*/}
-                                    {/*<button color="primary">Create Player</button>*/}
-                                    {/*<CardBody>*/}
-                                        <input
+                                <Card>
+
+                                    <CardBody>
+                                        <Input
                                             type="text"
                                             name="firstName"
-                                            placeholder="First Name"
+                                            label="First Name"
                                             value={this.state.firstName}
                                             onChange={e => this.setState({firstName: e.target.value})}
                                         />
-                                        <input
+                                        <Input
                                             type="text"
                                             name="lastName"
-                                            placeholder="Last Name"
+                                            label="Last Name"
                                             value={this.state.lastName}
                                             onChange={e => this.setState({lastName: e.target.value})}
                                         />
-                                        <input
+                                        <Input
                                             type="text"
                                             name="position"
-                                            placeholder="Position"
+                                            label="Position"
                                             value={this.state.position}
                                             onChange={e => this.setState({position: e.target.value})}
                                         />
-                                        <input
+                                        <Input
                                             type="text"
                                             name="graduatingClass"
-                                            placeholder="Class Of"
+                                            label="Class Of"
                                             value={this.state.graduatingClass}
                                             onChange={e => this.setState({graduatingClass: e.target.value})}
                                         />
-                                        <input
+                                        <Input
                                             type="number"
                                             name="maxBench"
-                                            placeholder="Max Bench"
+                                            label="Max Bench"
                                             value={this.state.maxBench}
                                             onChange={e => this.setState({maxBench: e.target.value})}
                                         />
-                                        <input
+                                        <Input
                                             type="number"
                                             name="maxSquat"
-                                            placeholder="Max Squat"
+                                            label="Max Squat"
                                             value={this.state.maxSquat}
                                             onChange={e => this.setState({maxSquat: e.target.value})}
                                         />
 
-                                        <button type="submit">Add</button>
-                                    {/*</CardBody>*/}
-                                {/*</Card>*/}
+                                        <Button color='primary' type="submit">Add</Button>
+                                    </CardBody>
+                                </Card>
                             </form>
 
 
@@ -130,10 +176,4 @@ class Createplayer extends Component {
 }
 
 export default graphql(Mutateplayer)(Createplayer)
-// export default graphql(Mutateplayer, {
-//     props: props => ({
-//         onAdd: player => {
-//             console.log('players: ', players)
-//         }
-//     })
-// })(test)
+

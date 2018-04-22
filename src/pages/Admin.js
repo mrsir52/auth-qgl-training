@@ -29,11 +29,16 @@ class Admin extends Component {
                         <br/>
                         <div className="col-lg-3">
                             <Card>
-                                <h2>Position Data</h2>
-                                <br/>
-                                <br/>
-                                <br/>
-                                <br/>
+                                <a href="/Createplayer">
+                                <h2>Create Player</h2>
+                                </a>
+                                <a href="/Updateplayer">
+                                <h2>Update Player</h2>
+                                </a>
+                                <a href="/Deleteplayer">
+                                <h2>Delete Player</h2>
+                                </a>
+
                             </Card>
                         </div>
                         <br/>

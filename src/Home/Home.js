@@ -17,9 +17,9 @@ class Home extends Component {
               </h4>
             )
         }
-        <a href="/Admin">
-        <button> Admin Page</button>
-        </a>
+        {/*<a href="/Admin">*/}
+        {/*<button> Admin Page</button>*/}
+        {/*</a>*/}
         {
           !isAuthenticated() && (
               <h4>
