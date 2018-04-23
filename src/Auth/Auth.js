@@ -9,7 +9,7 @@ export default class Auth {
     redirectUri: AUTH_CONFIG.callbackUrl,
     audience: `https://${AUTH_CONFIG.domain}/userinfo`,
     responseType: 'token id_token',
-    scope: 'openid'
+    scope: 'openid profile'
   });
 
   constructor() {
@@ -40,7 +40,9 @@ export default class Auth {
     // Set the time that the access token will expire at
     let expiresAt = JSON.stringify((authResult.expiresIn * 1000) + new Date().getTime());
     localStorage.setItem('access_token', authResult.accessToken);
+    console.log("access token:", authResult.accessToken)
     localStorage.setItem('id_token', authResult.idToken);
+    console.log("id token:", authResult.idToken)
     localStorage.setItem('expires_at', expiresAt);
     // navigate to the home route
     history.replace('/home');

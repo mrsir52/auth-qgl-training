@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route, Router } from 'react-router-dom';
+import { Route, Router, Redirect } from 'react-router-dom';
 import App from './Notauthenticated';
 import Home from './Home/Home';
 import Callback from './Callback/Callback';
@@ -30,6 +30,11 @@ export default () => (
                 <Route path="/Teamdata" render={(props) => <Teamdata auth={auth} {...props} />}/>
                 <Route path="/Updateplayer" render={(props) => <Updateplayer auth={auth} {...props} />}/>
                 <Route path="/Admin" render={(props) => <Admin auth={auth} {...props} />}/>
+                {/*<Route path="/Admin" render={(props) =>*/}
+                    {/*(!auth.isAuthenticated() || !auth.userHasScopes(['write:messages']) ?*/}
+                        {/*(<Redirect to="/home"/> ) : ( <Admin auth={auth} {...props} />))}/>*/}
+
+
                 <Route path="/Createplayer" render={(props) => <Createplayer auth={auth} {...props} />}/>
                 <Route path="/callback" render={(props) => {
                     handleAuthentication(props);
