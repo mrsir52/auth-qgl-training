@@ -10,6 +10,7 @@ import Updateplayer from './pages/Updateplayer'
 import Admin from './pages/Admin'
 import Teamdata from './pages/Teamdata'
 import Createplayer from './pages/Createplayer'
+import profile from './pages/Profile'
 
 const auth = new Auth();
 
@@ -34,7 +35,13 @@ export default () => (
                     {/*(!auth.isAuthenticated() || !auth.userHasScopes(['write:messages']) ?*/}
                         {/*(<Redirect to="/home"/> ) : ( <Admin auth={auth} {...props} />))}/>*/}
 
-
+                <Route path="/profile" render={(props) => (
+                    !auth.isAuthenticated() ? (
+                        <Redirect to="/home"/>
+                    ) : (
+                        <Profile auth={auth} {...props} />
+                    )
+                )} />
                 <Route path="/Createplayer" render={(props) => <Createplayer auth={auth} {...props} />}/>
                 <Route path="/callback" render={(props) => {
                     handleAuthentication(props);
